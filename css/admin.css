@@ -16,6 +16,10 @@
  float: none;
  clear: both;
 }
+
+.tbl-full {
+    width: 100%;
+}
 .menu {
     border-bottom: 1px solid grey;
 }
