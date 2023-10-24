@@ -61,7 +61,10 @@ if(isset($_POST['submit']))
   ";
   
   // 3. Execute query and save data to db
+  $conn =mysqli_query('localhost','root','') or die(mysqli_error());//db connection
+  $db_select =mysqli_select_db('DBNAME') or die(mysqli_error()); //selecting db
   
+  $res =mysqli_query($conn, $sql) or die(mysqli_error());
 }
 
 ?>
