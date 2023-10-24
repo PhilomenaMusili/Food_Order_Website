@@ -30,6 +30,9 @@ table tr th {
 table tr td {
     padding: 1%;
 }
+.tbl-30 {
+    width: 30%;
+}
 
 .btn-primary {
    background-color: #1e90ff; 

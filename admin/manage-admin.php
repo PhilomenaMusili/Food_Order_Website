@@ -4,7 +4,7 @@
       <div class="wrapper">
         <h1>Manage Admin</h1>
         <br><br><br>
-        <a href="#" class="btn-primary">Add Admin</a>
+        <a href="add-admin.php" class="btn-primary">Add Admin</a>
         <br><br><br>
         <table class="table">
 
