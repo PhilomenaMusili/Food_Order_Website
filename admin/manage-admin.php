@@ -3,7 +3,9 @@
       <div class="main_content">
       <div class="wrapper">
         <h1>Manage Admin</h1>
-        
+        <br><br><br>
+        <a href="#" class="btn-primary">Add Admin</a>
+        <br><br><br>
         <table class="table">
 
          <tr>
@@ -21,7 +23,26 @@
             Update Admin
             Delete Admin
           </td>
-         
+         </tr>
+
+         <tr>
+          <td>2</td>
+          <td>Mina</td>
+          <td>Phil</td>
+          <td>
+            Update Admin
+            Delete Admin
+          </td>
+         </tr>
+
+         <tr>
+          <td>3</td>
+          <td>Mina</td>
+          <td>Phil</td>
+          <td>
+            Update Admin
+            Delete Admin
+          </td>
          </tr>
         </table>
 

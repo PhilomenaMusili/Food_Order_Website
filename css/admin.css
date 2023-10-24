@@ -30,6 +30,18 @@ table tr th {
 table tr td {
     padding: 1%;
 }
+
+.btn-primary {
+   background-color: #1e90ff; 
+   padding: 1%;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #3742fa;
+}
 .menu {
     border-bottom: 1px solid grey;
 }
