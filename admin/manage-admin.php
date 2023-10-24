@@ -20,8 +20,8 @@
           <td>Mina</td>
           <td>Phil</td>
           <td>
-            Update Admin
-            Delete Admin
+          <a href="#" class="btn-secondary">Update Admin</a>
+          <a href="#" class="btn-danger">Delete Admin</a>
           </td>
          </tr>
 
@@ -30,8 +30,8 @@
           <td>Mina</td>
           <td>Phil</td>
           <td>
-            Update Admin
-            Delete Admin
+          <a href="#" class="btn-secondary">Update Admin</a>
+          <a href="#" class="btn-danger">Delete Admin</a>
           </td>
          </tr>
 
@@ -40,8 +40,8 @@
           <td>Mina</td>
           <td>Phil</td>
           <td>
-            Update Admin
-            Delete Admin
+          <a href="#" class="btn-secondary">Update Admin</a>
+          <a href="#" class="btn-danger">Delete Admin</a>
           </td>
          </tr>
         </table>
