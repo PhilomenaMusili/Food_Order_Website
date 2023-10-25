@@ -1,4 +1,8 @@
 <?php
+//Start session
+
+session_start();
+
 //contants to store none changing variables
 define('LOCALHOST','localhost');
 define('DB_USERNAME','root');
