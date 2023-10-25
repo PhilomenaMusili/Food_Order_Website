@@ -4,6 +4,7 @@
 session_start();
 
 //contants to store none changing variables
+define('SITEURL','http://localhost/Food_Order_Website/');
 define('LOCALHOST','localhost');
 define('DB_USERNAME','root');
 define('DB_PASSWORD',"");
