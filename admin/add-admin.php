@@ -58,7 +58,20 @@
     full_name='$full_name',
     username='$username', password='$password'  
     ";
-    
+
+    //3. Executing Query and saving data into db
+    $res =mysqli_query($conn, $sql) or die(mysqli_error());
+
+    //4. check whether the query is executed and display the appriprioate message
+    if($res==TRUE){
+        //Data Inserted
+        echo "Data inserted";
+    }
+    else {
+        echo "Data not inserted";
+    }
+
+
 
     }
 ?>
