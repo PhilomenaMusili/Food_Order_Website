@@ -1,3 +1,5 @@
+<?php include('../config/constants.php'); ?>
+
 <html>
  <head>
     <link rel="stylesheet" href="../css/admin.css">

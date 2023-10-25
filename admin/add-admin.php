@@ -42,29 +42,23 @@
 <?php include('partials/footer.php'); ?>
 
 <?php
-//process the value from the form and store it in the db
+    //process the value from the form and store it in the db
 
-//check wether the submit button is clicked
-if(isset($_POST['submit']))
-{
-    //button clicked
-  //1. get data from form
-  $full_name = $_POST['full_name'];
-  $username = $_POST['username'];
-  $password = md5($_POST['password']);//password ecncription with MD5
+    //check wether the submit button is clicked
+    if(isset($_POST['submit']))
+    {
+        //button clicked
+    //1. get data from form
+    $full_name = $_POST['full_name'];
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);//password ecncription with MD5
 
-  //2. sql query to save data in db
-  $sql ="INSERT INTO tbl_admin SET
-  full_name='$full_name',
-  username='$username',
-  password='$password'
-  ";
-  
-  // 3. Execute query and save data to db
-  $conn =mysqli_query('localhost','root','') or die(mysqli_error());//db connection
-  $db_select =mysqli_select_db('DBNAME') or die(mysqli_error()); //selecting db
-  
-  $res =mysqli_query($conn, $sql) or die(mysqli_error());
-}
+    //2. sql query to save data in db
+    $sql ="INSERT INTO tbl_admin SET
+    full_name='$full_name',
+    username='$username', password='$password'  
+    ";
+    
 
+    }
 ?>
