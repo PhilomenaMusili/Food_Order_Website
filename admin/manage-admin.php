@@ -12,6 +12,13 @@
           echo $_SESSION['add']; //displaying the message
           unset ($_SESSION['add']); //removing the session mesage
          }
+
+         if(isset($_SESSION['delete']))
+         {
+          
+          echo $_SESSION['delete']; //displaying the message
+          unset ($_SESSION['delete']); //removing the session mesage
+         }
         ?>
         <br><br>
         <a href="add-admin.php" class="btn-primary">Add Admin</a>
