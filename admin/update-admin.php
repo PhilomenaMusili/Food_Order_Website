@@ -96,7 +96,7 @@ if($res==true){
 
     }
     else {
-        $_SESSION['update']="<div class='success'>Failed to Update.</div>";
+        $_SESSION['update']="<div class='error'>Failed to Update.</div>";
         
         //redirect to manage admin page
         header('location:'.SITEURL.'admin/manage-admin.php');
