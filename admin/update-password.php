@@ -118,7 +118,7 @@ if(isset($_POST['submit']))
         header('location:'.SITEURL.'admin/manage-admin.php');
     }
  }
- 
+} 
 ?>
 
-<?php include('partials/footer.php') ?>
+<?php include('partials/footer.php'); ?>
