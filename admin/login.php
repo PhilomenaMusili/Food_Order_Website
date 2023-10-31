@@ -20,6 +20,12 @@
                 unset($_SESSION['login']);
 
             }
+            if(isset($_SESSION['no-login-msg']))
+            {
+                echo $_SESSION['no-login-msg'];
+                unset($_SESSION['no-login-msg']);
+
+            }
         ?>
         <br><br>
 
@@ -54,8 +60,9 @@ if(isset($_POST['submit']))
     if($count==1){
         //USER AVAILABLE
         $_SESSION['login'] = "<div class='success text-center'>Login Successful.</div>";
+        $_SESSION['user'] = $username;
         //redirect
-        header('location:'.SITEURL.'admin/login.php');
+        header('location:'.SITEURL.'admin/');
 
 
     }
