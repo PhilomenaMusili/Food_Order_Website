@@ -5,7 +5,7 @@
         <h1> Manage Category</h1>
 
         <br><br><br>
-        <a href="#" class="btn-primary">Add Category</a>
+        <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
         <br><br><br>
         
         <table class="table">
