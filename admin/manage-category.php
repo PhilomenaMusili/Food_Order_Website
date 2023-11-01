@@ -35,7 +35,7 @@
           $res= mysqli_query($conn, $sql);
 
           $count = mysqli_num_rows($res);
-          
+
           //create serial number variable
           $sn=1;
 
@@ -50,9 +50,29 @@
                 ?>
 
           <tr>
-            <td>1</td>
+            <td><?php echo $sn++; ?></td>
             <td><?php echo $title; ?></td>
-            <td><?php echo $image_name; ?></td>
+
+            <td>
+                <?php
+                //check if img name is available or not
+                if($image_name!="") 
+                {
+                     //display img
+                     ?>
+                     <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" width="100px">
+                     <?php
+
+                }
+                else
+                {
+                    //display message
+                    echo "<div class='error'>No image Added.</div>";
+
+                }
+                ?>
+            </td>
+
             <td><?php echo $featured; ?></td>
             <td><?php echo $active; ?></td>
             <td>
