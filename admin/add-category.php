@@ -14,6 +14,14 @@
                 unset($_SESSION['add']);
 
             }
+
+            
+        if(isset($_SESSION['upload']))
+        {
+            echo $_SESSION['upload'];
+            unset($_SESSION['upload']);
+
+        }
         ?>
         <br><br>
 
@@ -91,11 +99,38 @@
             //check whether the img is selected or not and set th value for img
             print_r($_FILES['image']);
 
-            die();//break the code here
+            //die();//break the code here
+
+            if(isset($_FILES['image']['name'])) {
+                //upload img
+                $image_name=$_FILES['image']['name'];
+
+                $source_path= $_FILES['image']['tmp_name'];
+
+                $destination_path="../images/category/".$image_name;
+
+                //finally upload img
+                $upload = move_uploaded_file($source_path, $destination_path);
+
+                //check if im uploaded or not
+                if($upload==false)
+                {
+                    $_SESSION['upload'] = "<div class='error text-center'>image not uploaded.</div>";
+                    header('location:'.SITEURL.'admin/add-category.php');
+                    //stop process
+                    die();
+                }
+
+            }
+            else {
+                //dont upload img
+                $image_name="";
+            }
 
             //sql to insert category to db
             $sql="INSERT INTO tbl_category SET
                title='$title',
+               image_name='$image_name',
                featured='$featured',
                active='$active'
             ";
