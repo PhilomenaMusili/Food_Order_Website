@@ -89,10 +89,10 @@
 
             }
             //check whether the img is selected or not and set th value for img
-            print_r($_FILES[]);
+            print_r($_FILES['image']);
 
             die();//break the code here
-            
+
             //sql to insert category to db
             $sql="INSERT INTO tbl_category SET
                title='$title',
