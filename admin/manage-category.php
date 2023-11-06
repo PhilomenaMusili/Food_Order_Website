@@ -37,6 +37,12 @@
         unset($_SESSION['update']);
 
         }
+        if(isset($_SESSION['upload']))
+        {
+         echo $_SESSION['upload'];
+        unset($_SESSION['upload']);
+
+        }
         
 
         ?>

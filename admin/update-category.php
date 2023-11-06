@@ -104,6 +104,49 @@
         $actiive = $_POST['active'];
 
         //updating new img
+        //check if img is selected or not
+        if(isset($_FILES['images']['name'])) {
+            $image_name = $_FILES['images']['name'];
+
+            //check if img is available or not
+            if($image_name != ""){
+                //img is available
+                //upload new img
+
+        //auto rename img
+        $ext = end(explode('.', $image_name));
+
+        //rename img
+        $image_name = "Food_Category_".rand(000, 999). "." .$ext; 
+
+        $source_path= $_FILES['image']['tmp_name'];
+
+        $destination_path="../images/category/".$image_name;
+
+        //finally upload img
+        $upload = move_uploaded_file($source_path, $destination_path);
+
+        //check if img uploaded or not
+        if($upload==false)
+        {
+            $_SESSION['upload'] = "<div class='error text-center'>image not uploaded.</div>";
+            header('location:'.SITEURL.'admin/manage-category.php');
+            //stop process
+            die();
+        }
+
+                //remove current img
+                $remove_path ="../images/category/".$current_image;
+                $rremove = unlink($remove_path);
+    }
+        else {
+                $image_name = $current_image;
+            }
+
+        }
+        else {
+            $image_name = $current_image;
+        }
         //update db
         $sql2 = "UPDATE tbl_category SET
         title='$title',
