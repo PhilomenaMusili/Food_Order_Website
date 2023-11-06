@@ -86,11 +86,25 @@
                 </tr>
                 <tr>
                     <td>
+                        <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <input type="submit" name="submit" value="update-category" class="btn-secondary">
                     </td>
                 </tr>
             </table>
       </form>
+      <?php
+      if(isset($_POST['submit']))
+      {
+        //get all the values from our form
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $current_image = $_POST['image_name'];
+        $featured = $_POST['featured'];
+        $actiive = $_POST['active'];
+      }
+      
+      ?>
 </div>
 
 <?php include('partials/footer.php');?>
