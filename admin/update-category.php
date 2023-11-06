@@ -38,7 +38,7 @@
 
         }
      ?>
-        <form action="" method="POST" enctype="multipart/form data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <table class="tbl-30">
                 <tr>
                     <td>Title</td>
@@ -81,7 +81,7 @@
                     <td>Active: </td>
                     <td>
                         <input <?php if($active=="Yes"){echo "checked";} ?> type="radio" name="active" value="Yes"> Yes
-                        <input <?php if($active=="Yes"){echo "checked";} ?> type="radio" name="active" value="No"> No
+                        <input <?php if($active=="No"){echo "checked";} ?> type="radio" name="active" value="No"> No
                     </td>
                 </tr>
                 <tr>
@@ -102,6 +102,32 @@
         $current_image = $_POST['image_name'];
         $featured = $_POST['featured'];
         $actiive = $_POST['active'];
+
+        //updating new img
+        //update db
+        $sql2 = "UPDATE tbl_category SET
+        title='$title',
+        featured='$featured',
+        active='$actiive'
+        WHERE id=$id
+        ";
+        //execute query
+        $res2 =mysqli_query($conn, $sql2);
+        //redirect to manage category with msg
+        if($res2==true)
+        {
+            //updated category
+            $_SESSION['update'] = "<div class='success text-center'>Category updated Successfully.</div>";
+            header('location:' . SITEURL . 'admin/manage-category.php');
+
+        }
+        else {
+            //failed to update
+            //updated category
+            $_SESSION['update'] = "<div class='error text-center'>Failed to updated category.</div>";
+            header('location:' . SITEURL . 'admin/manage-category.php');
+
+        }
       }
       
       ?>
