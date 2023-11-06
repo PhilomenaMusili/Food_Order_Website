@@ -4,6 +4,20 @@
         <h1>Update Category</h1>
 
         <br><br><br>
+
+        <?php
+        
+        if(isset($_GET['id']))
+        {
+        
+
+        }
+        else {
+            header('location:'.SITEURL.'admin/manage-category.php');
+
+
+        }
+     ?>
         <form action="" method="POST" enctype="multipart/form data">
             <table class="tbl-30">
                 <tr>
@@ -13,7 +27,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Curent $image_name</td>
+                    <td>Curent image_name</td>
                     <td>
                         image displayed here
                     </td>
