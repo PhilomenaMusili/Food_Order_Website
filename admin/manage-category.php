@@ -25,6 +25,13 @@
         unset($_SESSION['delete']);
 
         }
+        if(isset($_SESSION['no-category-found']))
+        {
+         echo $_SESSION['no-category-found'];
+        unset($_SESSION['no-category-found']);
+
+        }
+        
 
         ?>
         <br><br>
