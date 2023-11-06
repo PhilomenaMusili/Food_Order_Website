@@ -135,9 +135,22 @@
             die();
         }
 
-                //remove current img
-                $remove_path ="../images/category/".$current_image;
-                $rremove = unlink($remove_path);
+                //remove current img if available
+                if($current_image != "") {
+                    $remove_path ="../images/category/".$current_image;
+                    $remove = unlink($remove_path);
+    
+                    if($remove==false){
+                        //failsed to remove img
+                        $_SESSION['failed-remove'] = "<div class='error text-center'>Failed to remove current image.</div>";
+                        header('location:'.SITEURL.'admin/manage-category.php');
+                         //stop process
+                        die();
+    
+                    }
+
+                }
+              
     }
         else {
                 $image_name = $current_image;
@@ -150,6 +163,7 @@
         //update db
         $sql2 = "UPDATE tbl_category SET
         title='$title',
+        image_name='$image_name',
         featured='$featured',
         active='$actiive'
         WHERE id=$id
