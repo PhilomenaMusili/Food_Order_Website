@@ -43,6 +43,12 @@
         unset($_SESSION['upload']);
 
         }
+        if(isset($_SESSION['failed-remove']))
+        {
+         echo $_SESSION['failed-remove'];
+        unset($_SESSION['failed-remove']);
+
+        }
         
 
         ?>
