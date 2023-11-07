@@ -58,7 +58,9 @@
 
                             }
                             else {
+                                //we do have category
                                 ?>
+
                                 <option value="0">No Category Found</option>
                                 <?php
                             }
