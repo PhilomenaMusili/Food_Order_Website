@@ -39,6 +39,7 @@
         }
      ?>
         <form action="" method="POST" enctype="multipart/form-data">
+
             <table class="tbl-30">
                 <tr>
                     <td>Title</td>
@@ -73,8 +74,9 @@
                 <tr>
                     <td> Featured: </td>
                     <td>
-                        <input <?php if($featured=="Yes"){echo "checked";} ?>type="radio" name="featured" value="Yes"> Yes
-                        <input <?php if($featured=="no"){echo "checked";} ?>type="radio" name="featured" value="No"> No
+                        <input type="radio" <?php if ($featured == "Yes") { echo "checked"; } ?> name="featured" value="Yes"> Yes
+                        <input type="radio" <?php if ($featured == "No") { echo "checked"; } ?> name="featured" value="No"> No
+
                     </td>
                 </tr>
                 <tr>
@@ -99,14 +101,14 @@
         //get all the values from our form
         $id = $_POST['id'];
         $title = $_POST['title'];
-        $current_image = $_POST['image_name'];
+        $current_image = $_POST['current_name'];
         $featured = $_POST['featured'];
-        $actiive = $_POST['active'];
+        $active = $_POST['active'];
 
         //updating new img
         //check if img is selected or not
-        if(isset($_FILES['images']['name'])) {
-            $image_name = $_FILES['images']['name'];
+        if(isset($_FILES['image']['name'])) {
+            $image_name = $_FILES['image']['name'];
 
             //check if img is available or not
             if($image_name != ""){
@@ -165,7 +167,7 @@
         title='$title',
         image_name='$image_name',
         featured='$featured',
-        active='$actiive'
+        active='$active'
         WHERE id=$id
         ";
         //execute query
