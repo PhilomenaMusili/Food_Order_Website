@@ -23,7 +23,6 @@
         $current_category = $row2['category_id'];
         $featured = $row2['featured'];
         $active = $row2['active'];
-        
 
     }
     else
