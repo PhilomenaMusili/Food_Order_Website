@@ -1,6 +1,6 @@
 
-<?php include('partials-front/menu.php'); ?>
 
+<?php include('partials-front/menu.php'); ?>
 
 
     <!-- CAtegories Section Starts Here -->
