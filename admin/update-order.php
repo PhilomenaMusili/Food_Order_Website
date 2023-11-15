@@ -29,7 +29,7 @@
 
                     $food = $row['food'];
                     $price = $row['price'];
-                    $qty = $row['qty'];
+                    $quantity = $row['quantity'];
                     $status = $row['status'];
                     $customer_name = $row['customer_name'];
                     $customer_contact = $row['customer_contact'];
@@ -67,9 +67,9 @@
                 </tr>
 
                 <tr>
-                    <td>Qty</td>
+                    <td>quantity</td>
                     <td>
-                        <input type="number" name="qty" value="<?php echo $qty; ?>">
+                        <input type="number" name="quantity" value="<?php echo $quantity; ?>">
                     </td>
                 </tr>
 
@@ -134,9 +134,9 @@
                 //Get All the Values from Form
                 $id = $_POST['id'];
                 $price = $_POST['price'];
-                $qty = $_POST['qty'];
+                $quantity = $_POST['quantity'];
 
-                $total = $price * $qty;
+                $total = $price * $quantity;
 
                 $status = $_POST['status'];
 
@@ -147,7 +147,7 @@
 
                 //Update the Values
                 $sql2 = "UPDATE tbl_order SET 
-                    qty = $qty,
+                    quantity = $quantity,
                     total = $total,
                     status = '$status',
                     customer_name = '$customer_name',
