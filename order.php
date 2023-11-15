@@ -112,9 +112,9 @@
 
                     $food = $_POST['food'];
                     $price = $_POST['price'];
-                    $quantity = $_POST['quantity'];
+                    $qty = $_POST['qty'];
 
-                    $total = $price * $quantity; // total = price x qty 
+                    $total = $price * $qty; // total = price x qty 
 
                     $order_date = date("Y-m-d h:i:sa"); //Order DAte
 
@@ -131,7 +131,7 @@
                     $sql2 = "INSERT INTO tbl_order SET 
                         food = '$food',
                         price = $price,
-                        quantity = $quantity,
+                        qty = $qty,
                         total = $total,
                         order_date = '$order_date',
                         status = '$status',
