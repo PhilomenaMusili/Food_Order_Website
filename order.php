@@ -78,7 +78,7 @@
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
 
                         <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                        <input type="number" name="quantity" class="input-responsive" value="1" required>
                         
                     </div>
 
