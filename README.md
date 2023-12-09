@@ -24,7 +24,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
-```bash
+
 git clone https://github.com/your-username/food-order-website.git
 
 1. Set up a web server (e.g., Apache) and configure it to point to the project directory.
@@ -34,7 +34,6 @@ git clone https://github.com/your-username/food-order-website.git
 3. Update the config.php file with your database credentials:
 
 ## Usage
-
 Open your web browser and navigate to the URL where the project is hosted.
 
 Log in with your credentials or sign up if you don't have an account.
