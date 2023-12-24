@@ -24,7 +24,6 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
-
 git clone https://github.com/your-username/food-order-website.git
 
 1. Set up a web server (e.g., Apache) and configure it to point to the project directory.
