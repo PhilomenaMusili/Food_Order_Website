@@ -40,10 +40,12 @@ Log in with your credentials or sign up if you don't have an account.
 Explore the dashboard to manage categories, foods, and view order statistics.
 
 ## Database Setup
+
 Ensure you have a MySQL database set up. Import the database.sql file to create the necessary tables.
 
 ## Contributing
-We welcome contributions! If you'd like to contribute to this project, please follow these steps:
+
+I welcome contributions! If you'd like to contribute to this project, please follow these steps:
 
 Fork the repository.
 
@@ -59,4 +61,5 @@ git push origin feature/your-feature
 Open a pull request.
 
 ## License
+
 This project is licensed under the MIT License.
