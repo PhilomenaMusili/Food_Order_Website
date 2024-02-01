@@ -52,7 +52,7 @@ Fork the repository.
 Create a new branch:
 
 git checkout -b feature/your-feature
-Make your changes and commit them:
+then make your changes and commit them:
 
 git commit -m "Add your feature"
 Push to the branch:
