@@ -32,6 +32,8 @@ git clone https://github.com/your-username/food-order-website.git
 
 3. Update the config.php file with your database credentials:
 
+You are also required to have xammp or wamp installed in your laptop
+
 ## Usage
 Open your web browser and navigate to the URL where the project is hosted.
 
